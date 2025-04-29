@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Closed | Event Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a',
+                            600: '#3a3a3a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            color: #e5e7eb;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: translate(-50%, -50%) scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px rgba(139, 92, 246, 0.7);
+        }
+        
+        .card-glow {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div id="confetti-container" class="fixed inset-0 overflow-hidden pointer-events-none"></div>
+    
+    <div class="max-w-2xl w-full mx-4 bg-dark-800 rounded-xl shadow-2xl overflow-hidden card-glow border border-dark-600">
+        <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-900 to-blue-900 opacity-90"></div>
+            <div class="relative z-10 p-8 text-center">
+                <div class="w-24 h-24 bg-dark-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg border border-purple-500/20">
+                    <i class="fas fa-calendar-times text-4xl text-purple-400 glow"></i>
+                </div>
+                <h1 class="text-4xl font-bold text-white mb-4 glow">Registration Closed</h1>
+                <p class="text-xl text-gray-300 mb-8">We're sorry, but registration for this event has now ended.</p>
+            </div>
+        </div>
+        
+        <div class="p-8 md:p-10">
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-8"></div>
+                
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl font-semibold text-gray-200 mb-4">Thank you for your interest!</h2>
+                    <p class="text-gray-400 mb-6">All available spots have been filled and we're no longer accepting new registrations. We appreciate your enthusiasm and hope to see you at our next event.</p>
+                    
+                    <div class="bg-dark-700 border-l-4 border-yellow-500 p-4 mb-8 text-left">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-info-circle text-yellow-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-gray-300">
+                                    If you've already registered, check our website for results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <div class="flex items-center bg-dark-700 px-4 py-2 rounded-lg border border-dark-600">
+                            <i class="fas fa-users text-purple-400 mr-2"></i>
+                            <span class="text-gray-300">210+ Attendees</span>
+                        </div>
+                        <div class="flex items-center bg-dark-700 px-4 py-2 rounded-lg border border-dark-600">
+                            <i class="fas fa-calendar-day text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">May 5, 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://ease-the-error-sage.vercel.app/" class="relative overflow-hidden group">
+                    <button class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 pulse border border-purple-400/20">
+                        <span class="relative z-10 flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            Return to Our Website
+                        </span>
+                        <span class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></span>
+                    </button>
+                </a>
+                
+                <div class="mt-10 text-center text-gray-500 text-sm">
+                    <p>Questions? <a href="mailto:contact@example.com" class="text-purple-400 hover:text-purple-300 hover:underline transition-colors">fodse@svce.ac.in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create confetti effect
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#f87171', '#60a5fa', '#34d399', '#fbbf24', '#a78bfa', '#f472b6'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '100vh';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                const animationDuration = Math.random() * 3 + 2 + 's';
+                confetti.style.animation = `float ${animationDuration} linear forwards`;
+                
+                container.appendChild(confetti);
+                
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    confetti.remove();
+                }, parseFloat(animationDuration) * 1000);
+            }
+        }
+        
+        // Initial confetti
+        createConfetti();
+        
+        // Confetti every 3 seconds
+        setInterval(createConfetti, 3000);
+        
+        // Add ripple effect to button
+        document.querySelector('button').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create ripple element
+            const ripple = document.createElement('span');
+            ripple.className = 'absolute bg-white opacity-20 rounded-full transform -translate-x-1/2 -translate-y-1/2';
+            
+            // Set position and size
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = e.clientX - rect.left + 'px';
+            ripple.style.top = e.clientY - rect.top + 'px';
+            
+            // Add animation
+            ripple.style.animation = 'ripple 1s linear forwards';
+            
+            // Add to button
+            this.appendChild(ripple);
+            
+            // Remove after animation
+            setTimeout(() => {
+                ripple.remove();
+                window.location.href = 'https://ease-the-error-sage.vercel.app/';
+            }, 1000);
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=akeelahamed24/ease-the-error" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
